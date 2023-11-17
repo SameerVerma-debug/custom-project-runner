@@ -1,14 +1,14 @@
-const debounce = (callback,delay = 100) => {
+const debounce = (callback, delay = 100) => {
   let timeoutID;
   return (...args) => {
-    if(timeoutID){
+    if (timeoutID) {
       clearTimeout(timeoutID);
     }
 
     timeoutID = setTimeout(() => {
       callback(...args);
-    },delay)
-  }
-}
+    }, delay);
+  };
+};
 
-module.exports = {debounce};
+module.exports = { debounce };
